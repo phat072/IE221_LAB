@@ -48,6 +48,18 @@ def cau4():
         print("NO")
 
 
+def cau6():
+    n, m = map(int, input().split())
+    r, c = map(int, input().split())
+    arr = []
+    for i in range(n):
+        arr.append(list(map(int, input().split())))
+    if n * m == r * c:
+        arr = np.reshape(arr, (r, c)).tolist()
+
+    print(str(arr).replace('], [', '\n').replace('[', '').replace(',', '').replace(']', ''))
+
+
 def cau5():
     h, w = map(int, input().split())
     A = np.array([input().strip().split() for _ in range(h)], dtype=int)
